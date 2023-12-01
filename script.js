@@ -21,3 +21,15 @@ function getCookie(cname) {
     }
     return "";
 }
+
+function checkCookies(cname) {
+    let username = getCookie(cname);
+    if(username != ""){
+        alert("Welcome again " + username)
+    }else{
+        username = prompt("Please enter your name :", " ");
+        if(username != " " && username != null) {
+            setCookies(cname, username, 356);
+        }
+    }
+}
